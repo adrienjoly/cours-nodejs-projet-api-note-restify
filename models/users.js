@@ -1,17 +1,17 @@
-const database = require('../database')
+const database = require('../database');
 
-const Users = {}
+const Users = {};
 
 // Get users
 Users.getAll = async () => {
-  const usersCollection = database.db.collection('users')
-  return await usersCollection.find().toArray()
-}
+  const usersCollection = database.db.collection('users');
+  return await usersCollection.find().toArray();
+};
 
 // Insert user
 Users.insert = (user) => {
-  const usersCollection = database.db.collection('users')
-  usersCollection.insertOne(user)
-}
+  const usersCollection = database.db.collection('users');
+  usersCollection.insertOne(user);
+};
 
-module.exports = Users
+module.exports = Users;
