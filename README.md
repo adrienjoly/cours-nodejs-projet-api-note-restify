@@ -7,9 +7,6 @@
 ```$ git clone git@github.com:nguyen.1909/API-note.git```<br/>
 ``` $ cd API-note ```
 
-`$ git clone git@github.com:nguyen.1909/API-note.git`
-`$ cd API-note`
-
 ##### Install the dependencies
 
 `$ npm install`
@@ -17,7 +14,6 @@
 ##### Run project
 ``` $ npm start ``` or  ``` $ npm run dev ```<br/> 
 
-`$ npm start` or `$ npm run dev`
 
 ## Environment 
 **The API is deployed with [Heroku](https://www.heroku.com) on https://api-note-3moc.herokuapp.com/**<br/>
