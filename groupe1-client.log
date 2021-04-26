@@ -1,0 +1,495 @@
+
+> note-keeper@1.0.0 test:e2e /Users/adrienjoly/dev/adrienjoly/cours-nodejs-project-solution
+> E2E_MODE=true DB_PORT=27117 npm test
+
+
+> note-keeper@1.0.0 test /Users/adrienjoly/dev/adrienjoly/cours-nodejs-project-solution
+> ava --timeout=60s --verbose --serial ./tests/*.test.js
+
+
+  ✔ 1-golden-path › POST /signup - returns a token (131ms)
+  ✖ 1-golden-path › POST /signup - returns a null error 
+    ℹ response body from POST /signup: {
+        error: 'Cet identifiant est déjà associé à un compte',
+      }
+  ✔ 1-golden-path › POST /signup - returns a status 200
+  ✖ 1-golden-path › POST /signin on an existing user - returns a token 
+  ✔ 1-golden-path › POST /signin on an existing user - returns a null error (294ms)
+  ✔ 1-golden-path › POST /signin on an existing user - returns a status 200 (210ms)
+  ✔ 1-golden-path › GET /notes of new user - returns empty array (113ms)
+  ✖ 1-golden-path › GET /notes of new user - returns a null error Rejected promise returned by test
+  ✔ 1-golden-path › GET /notes of new user - returns a status 200 (136ms)
+  ✖ 1-golden-path › PUT /notes - returns a null error Rejected promise returned by test
+  ✔ 1-golden-path › PUT /notes - returns a status 200 (101ms)
+  ✖ 1-golden-path › PUT /notes - returns the note with its content Rejected promise returned by test
+  ✔ 1-golden-path › PUT /notes - adds a note (109ms)
+  ✖ 1-golden-path › PUT /notes - adds a note that has an _id Rejected promise returned by test
+  ✔ 1-golden-path › PATCH /notes/:id - returns a null error (124ms)
+  ✖ 1-golden-path › PATCH /notes/:id - returns a status 200 Rejected promise returned by test
+  ✔ 1-golden-path › PATCH /notes/:id - returns the note and its content (103ms)
+  ✖ 1-golden-path › PATCH /notes/:id - did update the content of the note Rejected promise returned by test
+  ✔ 1-golden-path › DELETE /notes/:id - returns a null error (110ms)
+  ✖ 1-golden-path › DELETE /notes/:id - returns a status 200 Rejected promise returned by test
+  ✔ 1-golden-path › DELETE /notes/:id - did delete the note (116ms)
+  ✖ 2-failure-cases › POST /signup without password - returns an error Rejected promise returned by test
+  ✖ 2-failure-cases › POST /signup without password - returns a status 400 Rejected promise returned by test
+  ✖ 2-failure-cases › POST /signup without password - returns no token Rejected promise returned by test
+  ✖ 2-failure-cases › POST /signup without username - returns an error 
+  ✔ 2-failure-cases › POST /signup without username - returns a status 400
+  ✔ 2-failure-cases › POST /signup without username - returns no token
+  ✔ 2-failure-cases › POST /signup with invalid username - returns an error
+  ✔ 2-failure-cases › POST /signup with invalid username - returns a status 400
+  ✔ 2-failure-cases › POST /signup with invalid username - returns no token
+  ✔ 2-failure-cases › POST /signup with username that already exists - returns an error (115ms)
+  ✔ 2-failure-cases › POST /signup with username that already exists - returns a status 400 (110ms)
+  ✖ 2-failure-cases › POST /signup with username that already exists - returns no token 
+  ✖ 2-failure-cases › POST /signin without password - returns an error Rejected promise returned by test
+  ✖ 2-failure-cases › POST /signin without password - returns a status 400 Rejected promise returned by test
+  ✖ 2-failure-cases › POST /signin without password - returns no token Rejected promise returned by test
+  ✖ 2-failure-cases › POST /signin without username - returns an error Rejected promise returned by test
+  ✖ 2-failure-cases › POST /signin without username - returns a status 400 Rejected promise returned by test
+  ✖ 2-failure-cases › POST /signin without username - returns no token Rejected promise returned by test
+  ✔ 2-failure-cases › POST /signin with invalid username - returns an error
+  ✔ 2-failure-cases › POST /signin with invalid username - returns a status 400
+  ✔ 2-failure-cases › POST /signin with invalid username - returns no token
+  ✔ 2-failure-cases › POST /signin with wrong username - returns an error (129ms)
+  ✔ 2-failure-cases › POST /signin with wrong username - returns a status 403 (159ms)
+  ✔ 2-failure-cases › POST /signin with wrong username - returns no token (127ms)
+  ✔ 2-failure-cases › POST /signin with wrong password - returns an error (139ms)
+  ✔ 2-failure-cases › POST /signin with wrong password - returns a status 403 (122ms)
+  ✔ 2-failure-cases › POST /signin with wrong password - returns no token (214ms)
+  ✔ 2-failure-cases › GET /notes without token - returns a status 401
+  ✔ 2-failure-cases › GET /notes with invalid token - returns a status 401
+  ✔ 2-failure-cases › GET /notes with expired token - returns a status 401
+  ✔ 2-failure-cases › PUT /notes with expired token - returns a status 401
+  ✔ 2-failure-cases › PATCH /notes/:id with invalid token - returns a status 401
+  ✔ 2-failure-cases › PATCH /notes/:id with unknown note id - returns an error (169ms)
+  ✖ 2-failure-cases › PATCH /notes/:id with unknown note id - returns a status 404 Rejected promise returned by test
+  ✔ 2-failure-cases › PATCH /notes/:id with note that belongs to another user - returns an error (301ms)
+  ✔ 2-failure-cases › PATCH /notes/:id with note that belongs to another user - returns a status 403 (251ms)
+  ✔ 2-failure-cases › DELETE /notes/:id with invalid token - returns a status 401
+  ✔ 2-failure-cases › DELETE /notes/:id with unknown note id - returns an error (140ms)
+  ✖ 2-failure-cases › DELETE /notes/:id with unknown note id - returns a status 404 Rejected promise returned by test
+  ✔ 2-failure-cases › DELETE /notes/:id with note that belongs to another user - returns an error (196ms)
+  ✔ 2-failure-cases › DELETE /notes/:id with note that belongs to another user - returns a status 403 (205ms)
+  ─
+
+  1-golden-path › POST /signup - returns a null error
+
+    ℹ response body from POST /signup: {
+        error: 'Cet identifiant est déjà associé à un compte',
+      }
+
+  tests/1-golden-path.test.js:34
+
+   33:   test('returns a token', (t, res) => t.is(typeof res.data.token, 'strin…
+   34:   test('returns a null error', (t, res) => t.is(res.data.error, null));  
+   35:   test('returns a status 200', (t, res) => t.is(res.status, 200));       
+
+  Difference:
+
+  - 'Cet identifiant est déjà associé à un compte'
+  + null
+
+  › tests/1-golden-path.test.js:34:46
+  › tests/setup/common.js:39:12
+
+
+
+  1-golden-path › POST /signin on an existing user - returns a token
+
+  tests/1-golden-path.test.js:41
+
+   40:     const signupRes = await axios.post(`${t.context.urlPrefix}/signup`, …
+   41:     t.is(signupRes.data.error, null);                                    
+   42:     t.is(signupRes.status, 200);                                         
+
+  Difference:
+
+  - 'Cet identifiant est déjà associé à un compte'
+  + null
+
+  › Object.fct (tests/1-golden-path.test.js:41:7)
+  › tests/setup/common.js:37:18
+
+
+
+  1-golden-path › GET /notes of new user - returns a null error
+
+  tests/1-golden-path.test.js:58
+
+   57:   test('returns empty array', (t, res) => t.deepEqual(res.data.notes, []…
+   58:   test('returns a null error', (t, res) => t.is(res.data.error, null));  
+   59:   test('returns a status 200', (t, res) => t.is(res.status, 200));       
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › tests/1-golden-path.test.js:58:53
+  › tests/setup/common.js:39:12
+
+
+
+  1-golden-path › PUT /notes - returns a null error
+
+  tests/1-golden-path.test.js:70
+
+   69:   });                                                                    
+   70:   test('returns a null error', (t, { putRes }) => t.is(putRes.data.error…
+   71:   test('returns a status 200', (t, { putRes }) => t.is(putRes.status, 20…
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › tests/1-golden-path.test.js:70:63
+  › tests/setup/common.js:39:12
+
+
+
+  1-golden-path › PUT /notes - returns the note with its content
+
+  tests/1-golden-path.test.js:72
+
+   71:   test('returns a status 200', (t, { putRes }) => t.is(putRes.status, 20…
+   72:   test('returns the note with its content', (t, { putRes }) => t.is(putR…
+   73:   setup((t, { token }) => { // eslint-disable-line arrow-body-style      
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › tests/1-golden-path.test.js:72:76
+  › tests/setup/common.js:39:12
+
+
+
+  1-golden-path › PUT /notes - adds a note that has an _id
+
+  tests/1-golden-path.test.js:78
+
+   77:   test('adds a note', (t, { data }) => t.is(data.notes[0].content, conte…
+   78:   test('adds a note that has an _id', (t, { data }) => t.is(typeof data.…
+   79: });                                                                      
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot destructure property `data` of \'undefined\' or \'null\'.',
+  }
+
+  › tests/1-golden-path.test.js:78:43
+  › tests/setup/common.js:39:12
+
+
+
+  1-golden-path › PATCH /notes/:id - returns a status 200
+
+  tests/1-golden-path.test.js:88
+
+   87:     const res = await axios.put(`${t.context.urlPrefix}/notes`, { conten…
+   88:     const id = res.data.note._id; // eslint-disable-line no-underscore-d…
+   89:     t.is(res.data.note.content, initialContent);                         
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › Object.fct (tests/1-golden-path.test.js:88:20)
+  › tests/setup/common.js:37:18
+
+
+
+  1-golden-path › PATCH /notes/:id - did update the content of the note
+
+  tests/1-golden-path.test.js:88
+
+   87:     const res = await axios.put(`${t.context.urlPrefix}/notes`, { conten…
+   88:     const id = res.data.note._id; // eslint-disable-line no-underscore-d…
+   89:     t.is(res.data.note.content, initialContent);                         
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › Object.fct (tests/1-golden-path.test.js:88:20)
+  › tests/setup/common.js:37:18
+
+
+
+  1-golden-path › DELETE /notes/:id - returns a status 200
+
+  tests/1-golden-path.test.js:112
+
+   111:     const res = await axios.put(`${t.context.urlPrefix}/notes`, { conte…
+   112:     const id = res.data.note._id; // eslint-disable-line no-underscore-…
+   113:     // 2. delete the note                                               
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › Object.fct (tests/1-golden-path.test.js:112:20)
+  › tests/setup/common.js:37:18
+
+
+
+  2-failure-cases › POST /signup without password - returns an error
+
+  tests/2-failure-cases.test.js:22
+
+   21:   setup((t) => axios.post(`${t.context.urlPrefix}/signup`));             
+   22:   test('returns an error', (t, res) => t.is(res.data.error, 'Le mot de p…
+   23:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:22:49
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › POST /signup without password - returns a status 400
+
+  tests/2-failure-cases.test.js:23
+
+   22:   test('returns an error', (t, res) => t.is(res.data.error, 'Le mot de p…
+   23:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+   24:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'status\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:23:53
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › POST /signup without password - returns no token
+
+  tests/2-failure-cases.test.js:24
+
+   23:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+   24:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+   25: });                                                                      
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:24:56
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › POST /signup without username - returns an error
+
+  tests/2-failure-cases.test.js:29
+
+   28:   setup((t) => axios.post(`${t.context.urlPrefix}/signup`, { password: '…
+   29:   test('returns an error', (t, res) => t.is(res.data.error, 'Votre ident…
+   30:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+
+  Difference:
+
+  - 'Saisissez un identifiant et un mot de passe'
+  + 'Votre identifiant doit contenir entre 2 et 20 caractères'
+
+  › tests/2-failure-cases.test.js:29:42
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › POST /signup with username that already exists - returns no token
+
+  tests/2-failure-cases.test.js:52
+
+   51:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+   52:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+   53: });                                                                      
+
+  Difference:
+
+  - 'string'
+  + 'undefined'
+
+  › tests/2-failure-cases.test.js:52:42
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › POST /signin without password - returns an error
+
+  tests/2-failure-cases.test.js:57
+
+   56:   setup((t) => axios.post(`${t.context.urlPrefix}/signin`));             
+   57:   test('returns an error', (t, res) => t.is(res.data.error, 'Le mot de p…
+   58:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:57:49
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › POST /signin without password - returns a status 400
+
+  tests/2-failure-cases.test.js:58
+
+   57:   test('returns an error', (t, res) => t.is(res.data.error, 'Le mot de p…
+   58:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+   59:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'status\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:58:53
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › POST /signin without password - returns no token
+
+  tests/2-failure-cases.test.js:59
+
+   58:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+   59:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+   60: });                                                                      
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:59:56
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › POST /signin without username - returns an error
+
+  tests/2-failure-cases.test.js:64
+
+   63:   setup((t) => axios.post(`${t.context.urlPrefix}/signin`, { password: '…
+   64:   test('returns an error', (t, res) => t.is(res.data.error, 'Votre ident…
+   65:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:64:49
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › POST /signin without username - returns a status 400
+
+  tests/2-failure-cases.test.js:65
+
+   64:   test('returns an error', (t, res) => t.is(res.data.error, 'Votre ident…
+   65:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+   66:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'status\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:65:53
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › POST /signin without username - returns no token
+
+  tests/2-failure-cases.test.js:66
+
+   65:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+   66:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+   67: });                                                                      
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'data\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:66:56
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › PATCH /notes/:id with unknown note id - returns a status 404
+
+  tests/2-failure-cases.test.js:137
+
+   136:   test('returns an error', (t, res) => t.is(res.data.error, 'Cet identi…
+   137:   test('returns a status 404', (t, res) => t.is(res.status, 404));      
+   138: });                                                                     
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'status\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:137:53
+  › tests/setup/common.js:39:12
+
+
+
+  2-failure-cases › DELETE /notes/:id with unknown note id - returns a status 404
+
+  tests/2-failure-cases.test.js:169
+
+   168:   test('returns an error', (t, res) => t.is(res.data.error, 'Cet identi…
+   169:   test('returns a status 404', (t, res) => t.is(res.status, 404));      
+   170: });                                                                     
+
+  Rejected promise returned by test. Reason:
+
+  TypeError {
+    message: 'Cannot read property \'status\' of undefined',
+  }
+
+  › tests/2-failure-cases.test.js:169:53
+  › tests/setup/common.js:39:12
+
+  ─
+
+  22 tests failed

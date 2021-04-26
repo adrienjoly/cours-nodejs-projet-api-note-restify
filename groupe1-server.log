@@ -1,0 +1,119 @@
+Docker Compose is now in the Docker CLI, try `docker compose up`
+
+Attaching to api-note_web_1
+[36mweb_1    |[0m npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+[36mweb_1    |[0m npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[36mweb_1    |[0m 
+[36mweb_1    |[0m audited 506 packages in 8.173s
+[36mweb_1    |[0m 
+[36mweb_1    |[0m 66 packages are looking for funding
+[36mweb_1    |[0m   run `npm fund` for details
+[36mweb_1    |[0m 
+[36mweb_1    |[0m found 0 vulnerabilities
+[36mweb_1    |[0m 
+[36mweb_1    |[0m 
+[36mweb_1    |[0m > api-note@1.0.0 start /home/node/app
+[36mweb_1    |[0m > node server.js
+[36mweb_1    |[0m 
+[36mweb_1    |[0m Successfully connected to MongoDB client
+[36mweb_1    |[0m App listening on PORT 3000
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+[36mweb_1    |[0m     at /home/node/app/server.js:18:13
+[36mweb_1    |[0m     at nextTick (/home/node/app/node_modules/restify/lib/chain.js:167:13)
+[36mweb_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+[36mweb_1    |[0m (node:30) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+[36mweb_1    |[0m     at /home/node/app/server.js:18:13
+[36mweb_1    |[0m     at nextTick (/home/node/app/node_modules/restify/lib/chain.js:167:13)
+[36mweb_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+[36mweb_1    |[0m     at /home/node/app/server.js:18:13
+[36mweb_1    |[0m     at nextTick (/home/node/app/node_modules/restify/lib/chain.js:167:13)
+[36mweb_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[36mweb_1    |[0m     at ServerResponse.setHeader (_http_outgoing.js:526:11)
+[36mweb_1    |[0m     at ServerResponse.__send (/home/node/app/node_modules/restify/lib/response.js:505:18)
+[36mweb_1    |[0m     at ServerResponse.send (/home/node/app/node_modules/restify/lib/response.js:316:21)
+[36mweb_1    |[0m     at /home/node/app/server.js:29:20
+[36mweb_1    |[0m     at Object.UserController.signup (/home/node/app/controllers/user-controller.js:44:10)
+[36mweb_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 4)
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[36mweb_1    |[0m     at ServerResponse.setHeader (_http_outgoing.js:526:11)
+[36mweb_1    |[0m     at ServerResponse.__send (/home/node/app/node_modules/restify/lib/response.js:505:18)
+[36mweb_1    |[0m     at ServerResponse.send (/home/node/app/node_modules/restify/lib/response.js:316:21)
+[36mweb_1    |[0m     at /home/node/app/server.js:29:20
+[36mweb_1    |[0m     at Object.UserController.signup (/home/node/app/controllers/user-controller.js:44:10)
+[36mweb_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 5)
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[36mweb_1    |[0m     at ServerResponse.setHeader (_http_outgoing.js:526:11)
+[36mweb_1    |[0m     at ServerResponse.__send (/home/node/app/node_modules/restify/lib/response.js:505:18)
+[36mweb_1    |[0m     at ServerResponse.send (/home/node/app/node_modules/restify/lib/response.js:316:21)
+[36mweb_1    |[0m     at /home/node/app/server.js:25:22
+[36mweb_1    |[0m     at Object.UserController.signup (/home/node/app/controllers/user-controller.js:29:14)
+[36mweb_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[36mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 6)
+[36mweb_1    |[0m /home/node/app/server.js:39
+[36mweb_1    |[0m     const { username, password } = req.body;
+[36mweb_1    |[0m             ^
+[36mweb_1    |[0m 
+[36mweb_1    |[0m TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+[36mweb_1    |[0m     at /home/node/app/server.js:39:13
+[36mweb_1    |[0m     at nextTick (/home/node/app/node_modules/restify/lib/chain.js:167:13)
+[36mweb_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[36mweb_1    |[0m npm ERR! code ELIFECYCLE
+[36mweb_1    |[0m npm ERR! errno 1
+[36mweb_1    |[0m npm ERR! api-note@1.0.0 start: `node server.js`
+[36mweb_1    |[0m npm ERR! Exit status 1
+[36mweb_1    |[0m npm ERR! 
+[36mweb_1    |[0m npm ERR! Failed at the api-note@1.0.0 start script.
+[36mweb_1    |[0m npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+[36mweb_1    |[0m 
+[36mweb_1    |[0m npm ERR! A complete log of this run can be found in:
+[36mweb_1    |[0m npm ERR!     /home/node/.npm/_logs/2021-04-26T08_42_39_058Z-debug.log
+[33mweb_1    |[0m npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+[33mweb_1    |[0m npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[33mweb_1    |[0m 
+[33mweb_1    |[0m audited 506 packages in 11.386s
+[33mweb_1    |[0m 
+[33mweb_1    |[0m 66 packages are looking for funding
+[33mweb_1    |[0m   run `npm fund` for details
+[33mweb_1    |[0m 
+[33mweb_1    |[0m found 0 vulnerabilities
+[33mweb_1    |[0m 
+[33mweb_1    |[0m 
+[33mweb_1    |[0m > api-note@1.0.0 start /home/node/app
+[33mweb_1    |[0m > node server.js
+[33mweb_1    |[0m 
+[33mweb_1    |[0m Successfully connected to MongoDB client
+[33mweb_1    |[0m App listening on PORT 3000
+[33mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[33mweb_1    |[0m     at ServerResponse.setHeader (_http_outgoing.js:526:11)
+[33mweb_1    |[0m     at ServerResponse.__send (/home/node/app/node_modules/restify/lib/response.js:505:18)
+[33mweb_1    |[0m     at ServerResponse.send (/home/node/app/node_modules/restify/lib/response.js:316:21)
+[33mweb_1    |[0m     at /home/node/app/server.js:46:22
+[33mweb_1    |[0m     at Object.UserController.signin (/home/node/app/controllers/user-controller.js:78:10)
+[33mweb_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[33mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+[33mweb_1    |[0m (node:30) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[33mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[33mweb_1    |[0m     at ServerResponse.setHeader (_http_outgoing.js:526:11)
+[33mweb_1    |[0m     at ServerResponse.__send (/home/node/app/node_modules/restify/lib/response.js:505:18)
+[33mweb_1    |[0m     at ServerResponse.send (/home/node/app/node_modules/restify/lib/response.js:316:21)
+[33mweb_1    |[0m     at /home/node/app/server.js:46:22
+[33mweb_1    |[0m     at Object.UserController.signin (/home/node/app/controllers/user-controller.js:78:10)
+[33mweb_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[33mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+[33mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[33mweb_1    |[0m     at ServerResponse.setHeader (_http_outgoing.js:526:11)
+[33mweb_1    |[0m     at ServerResponse.__send (/home/node/app/node_modules/restify/lib/response.js:505:18)
+[33mweb_1    |[0m     at ServerResponse.send (/home/node/app/node_modules/restify/lib/response.js:316:21)
+[33mweb_1    |[0m     at /home/node/app/server.js:46:22
+[33mweb_1    |[0m     at Object.UserController.signin (/home/node/app/controllers/user-controller.js:78:10)
+[33mweb_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[33mweb_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+Gracefully stopping... (press Ctrl+C again to force)
