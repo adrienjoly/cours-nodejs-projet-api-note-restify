@@ -1,0 +1,622 @@
+Docker Compose is now in the Docker CLI, try `docker compose up`
+
+Attaching to api-note_api_1, api-note_tests_1
+[36mapi_1    |[0m npm install
+[33mtests_1  |[0m waiting for server...
+[33mtests_1  |[0m npx: installed 13 in 12.097s
+[36mapi_1    |[0m npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+[36mapi_1    |[0m npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[36mapi_1    |[0m 
+[36mapi_1    |[0m audited 506 packages in 20.965s
+[36mapi_1    |[0m 
+[36mapi_1    |[0m 66 packages are looking for funding
+[36mapi_1    |[0m   run `npm fund` for details
+[36mapi_1    |[0m 
+[36mapi_1    |[0m found 0 vulnerabilities
+[36mapi_1    |[0m 
+[36mapi_1    |[0m npm start
+[36mapi_1    |[0m 
+[36mapi_1    |[0m > api-note@1.0.0 start /home/node/app
+[36mapi_1    |[0m > node server.js
+[36mapi_1    |[0m 
+[36mapi_1    |[0m Successfully connected to MongoDB client
+[36mapi_1    |[0m App listening on PORT 3000
+[33mtests_1  |[0m starting tests...
+[33mtests_1  |[0m 
+[33mtests_1  |[0m ℹ️ Testing API in end-to-end mode.
+[33mtests_1  |[0m WARNING: These tests will clear the database mongodb://mongo:27017
+[33mtests_1  |[0m   ✔ 1-golden-path › POST /signup - returns a token (273ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › POST /signup - returns a null error (109ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › POST /signup - returns a status 200 (108ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › POST /signin on an existing user - returns a token (238ms)
+[33mtests_1  |[0m   ✖ 1-golden-path › POST /signin on an existing user - returns a null error 
+[33mtests_1  |[0m   ✖ 1-golden-path › POST /signin on an existing user - returns a status 200 
+[33mtests_1  |[0m   ✔ 1-golden-path › GET /notes of new user - returns empty array (160ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › GET /notes of new user - returns a null error (149ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › GET /notes of new user - returns a status 200 (140ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › PUT /notes - returns a null error (180ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › PUT /notes - returns a status 200 (145ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › PUT /notes - returns the note with its content (133ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › PUT /notes - adds a note (146ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › PUT /notes - adds a note that has an _id (214ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › PATCH /notes/:id - returns a null error (205ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › PATCH /notes/:id - returns a status 200 (196ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › PATCH /notes/:id - returns the note and its content (169ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › PATCH /notes/:id - did update the content of the note (213ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › DELETE /notes/:id - returns a null error (184ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › DELETE /notes/:id - returns a status 200 (197ms)
+[33mtests_1  |[0m   ✔ 1-golden-path › DELETE /notes/:id - did delete the note (167ms)
+[33mtests_1  |[0m ℹ️ Testing API in end-to-end mode.
+[33mtests_1  |[0m WARNING: These tests will clear the database mongodb://mongo:27017
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+[36mapi_1    |[0m     at /home/node/app/server.js:18:13
+[36mapi_1    |[0m     at nextTick (/home/node/app/node_modules/restify/lib/chain.js:167:13)
+[36mapi_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+[36mapi_1    |[0m (node:30) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signup without password - returns an error Rejected promise returned by test
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+[36mapi_1    |[0m     at /home/node/app/server.js:18:13
+[36mapi_1    |[0m     at nextTick (/home/node/app/node_modules/restify/lib/chain.js:167:13)
+[36mapi_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signup without password - returns a status 400 Rejected promise returned by test
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+[36mapi_1    |[0m     at /home/node/app/server.js:18:13
+[36mapi_1    |[0m     at nextTick (/home/node/app/node_modules/restify/lib/chain.js:167:13)
+[36mapi_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signup without password - returns no token Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signup without username - returns an error 
+[33mtests_1  |[0m   ✔ 2-failure-cases › POST /signup without username - returns a status 400
+[33mtests_1  |[0m   ✔ 2-failure-cases › POST /signup without username - returns no token
+[33mtests_1  |[0m   ✔ 2-failure-cases › POST /signup with invalid username - returns an error
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[36mapi_1    |[0m     at ServerResponse.setHeader (_http_outgoing.js:526:11)
+[36mapi_1    |[0m     at ServerResponse.__send (/home/node/app/node_modules/restify/lib/response.js:505:18)
+[36mapi_1    |[0m     at ServerResponse.send (/home/node/app/node_modules/restify/lib/response.js:316:21)
+[36mapi_1    |[0m     at /home/node/app/server.js:29:20
+[36mapi_1    |[0m     at Object.UserController.signup (/home/node/app/controllers/user-controller.js:44:10)
+[36mapi_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 4)
+[33mtests_1  |[0m   ✔ 2-failure-cases › POST /signup with invalid username - returns a status 400
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[36mapi_1    |[0m     at ServerResponse.setHeader (_http_outgoing.js:526:11)
+[36mapi_1    |[0m     at ServerResponse.__send (/home/node/app/node_modules/restify/lib/response.js:505:18)
+[36mapi_1    |[0m     at ServerResponse.send (/home/node/app/node_modules/restify/lib/response.js:316:21)
+[36mapi_1    |[0m     at /home/node/app/server.js:29:20
+[36mapi_1    |[0m     at Object.UserController.signup (/home/node/app/controllers/user-controller.js:44:10)
+[36mapi_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 5)
+[33mtests_1  |[0m   ✔ 2-failure-cases › POST /signup with invalid username - returns no token
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[36mapi_1    |[0m     at ServerResponse.setHeader (_http_outgoing.js:526:11)
+[36mapi_1    |[0m     at ServerResponse.__send (/home/node/app/node_modules/restify/lib/response.js:505:18)
+[36mapi_1    |[0m     at ServerResponse.send (/home/node/app/node_modules/restify/lib/response.js:316:21)
+[36mapi_1    |[0m     at /home/node/app/server.js:29:20
+[36mapi_1    |[0m     at Object.UserController.signup (/home/node/app/controllers/user-controller.js:44:10)
+[36mapi_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[36mapi_1    |[0m (node:30) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 6)
+[33mtests_1  |[0m   ✔ 2-failure-cases › POST /signup with username that already exists - returns an error (251ms)
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signup with username that already exists - returns a status 400 
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signup with username that already exists - returns no token 
+[36mapi_1    |[0m /home/node/app/server.js:39
+[36mapi_1    |[0m     const { username, password } = req.body;
+[36mapi_1    |[0m             ^
+[36mapi_1    |[0m 
+[36mapi_1    |[0m TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+[36mapi_1    |[0m     at /home/node/app/server.js:39:13
+[36mapi_1    |[0m     at nextTick (/home/node/app/node_modules/restify/lib/chain.js:167:13)
+[36mapi_1    |[0m     at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[36mapi_1    |[0m npm ERR! code ELIFECYCLE
+[36mapi_1    |[0m npm ERR! errno 1
+[36mapi_1    |[0m npm ERR! api-note@1.0.0 start: `node server.js`
+[36mapi_1    |[0m npm ERR! Exit status 1
+[36mapi_1    |[0m npm ERR! 
+[36mapi_1    |[0m npm ERR! Failed at the api-note@1.0.0 start script.
+[36mapi_1    |[0m npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin without password - returns an error Rejected promise returned by test
+[36mapi_1    |[0m 
+[36mapi_1    |[0m npm ERR! A complete log of this run can be found in:
+[36mapi_1    |[0m npm ERR!     /home/node/.npm/_logs/2021-04-26T15_42_30_631Z-debug.log
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin without password - returns a status 400 Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin without password - returns no token Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin without username - returns an error Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin without username - returns a status 400 Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin without username - returns no token Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin with invalid username - returns an error Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin with invalid username - returns a status 400 Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin with invalid username - returns no token Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin with wrong username - returns an error Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin with wrong username - returns a status 403 Rejected promise returned by test
+[32mapi_1    |[0m npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+[32mapi_1    |[0m npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[32mapi_1    |[0m 
+[32mapi_1    |[0m audited 506 packages in 17.127s
+[32mapi_1    |[0m 
+[32mapi_1    |[0m 66 packages are looking for funding
+[32mapi_1    |[0m   run `npm fund` for details
+[32mapi_1    |[0m 
+[32mapi_1    |[0m found 0 vulnerabilities
+[32mapi_1    |[0m 
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin with wrong username - returns no token Rejected promise returned by test
+[32mapi_1    |[0m npm start
+[32mapi_1    |[0m 
+[32mapi_1    |[0m > api-note@1.0.0 start /home/node/app
+[32mapi_1    |[0m > node server.js
+[32mapi_1    |[0m 
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin with wrong password - returns an error Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin with wrong password - returns a status 403 Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › POST /signin with wrong password - returns no token Rejected promise returned by test
+[33mtests_1  |[0m   ✖ 2-failure-cases › GET /notes without token - returns a status 401 Rejected promise returned by test
+[32mapi_1    |[0m Successfully connected to MongoDB client
+[32mapi_1    |[0m App listening on PORT 3000
+[33mtests_1  |[0m   ✔ 2-failure-cases › GET /notes with invalid token - returns a status 401
+[33mtests_1  |[0m   ✔ 2-failure-cases › GET /notes with expired token - returns a status 401
+[33mtests_1  |[0m   ✔ 2-failure-cases › PUT /notes with expired token - returns a status 401
+[33mtests_1  |[0m   ✔ 2-failure-cases › PATCH /notes/:id with invalid token - returns a status 401
+[33mtests_1  |[0m   ✔ 2-failure-cases › PATCH /notes/:id with unknown note id - returns an error (192ms)
+[33mtests_1  |[0m   ✔ 2-failure-cases › PATCH /notes/:id with unknown note id - returns a status 404 (137ms)
+[33mtests_1  |[0m   ✔ 2-failure-cases › PATCH /notes/:id with note that belongs to another user - returns an error (330ms)
+[33mtests_1  |[0m   ✔ 2-failure-cases › PATCH /notes/:id with note that belongs to another user - returns a status 403 (267ms)
+[33mtests_1  |[0m   ✔ 2-failure-cases › DELETE /notes/:id with invalid token - returns a status 401
+[33mtests_1  |[0m   ✔ 2-failure-cases › DELETE /notes/:id with unknown note id - returns an error (151ms)
+[33mtests_1  |[0m   ✔ 2-failure-cases › DELETE /notes/:id with unknown note id - returns a status 404 (221ms)
+[33mtests_1  |[0m   ✔ 2-failure-cases › DELETE /notes/:id with note that belongs to another user - returns an error (303ms)
+[33mtests_1  |[0m   ✔ 2-failure-cases › DELETE /notes/:id with note that belongs to another user - returns a status 403 (272ms)
+[33mtests_1  |[0m   ─
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   1-golden-path › POST /signin on an existing user - returns a null error
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/1-golden-path.test.js:49
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    48:   test('returns a token', (t, res) => t.is(typeof res.data.token, 'strin…
+[33mtests_1  |[0m    49:   test('returns a null error', (t, res) => t.is(res.data.error, null));  
+[33mtests_1  |[0m    50:   test('returns a status 200', (t, res) => t.is(res.status, 200));       
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Difference:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   - 'Cet identifiant est inconnu'
+[33mtests_1  |[0m   + null
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/1-golden-path.test.js:49:46
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   1-golden-path › POST /signin on an existing user - returns a status 200
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/1-golden-path.test.js:50
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    49:   test('returns a null error', (t, res) => t.is(res.data.error, null));
+[33mtests_1  |[0m    50:   test('returns a status 200', (t, res) => t.is(res.status, 200));     
+[33mtests_1  |[0m    51: });                                                                    
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Difference:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   - 403
+[33mtests_1  |[0m   + 200
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/1-golden-path.test.js:50:46
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signup without password - returns an error
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:22
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    21:   setup((t) => axios.post(`${t.context.urlPrefix}/signup`));             
+[33mtests_1  |[0m    22:   test('returns an error', (t, res) => t.is(res.data.error, 'Le mot de p…
+[33mtests_1  |[0m    23:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'data\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:22:49
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signup without password - returns a status 400
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:23
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    22:   test('returns an error', (t, res) => t.is(res.data.error, 'Le mot de p…
+[33mtests_1  |[0m    23:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m    24:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:23:53
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signup without password - returns no token
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:24
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    23:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m    24:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+[33mtests_1  |[0m    25: });                                                                      
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'data\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:24:56
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signup without username - returns an error
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:29
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    28:   setup((t) => axios.post(`${t.context.urlPrefix}/signup`, { password: '…
+[33mtests_1  |[0m    29:   test('returns an error', (t, res) => t.is(res.data.error, 'Votre ident…
+[33mtests_1  |[0m    30:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Difference:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   - 'Saisissez un identifiant et un mot de passe'
+[33mtests_1  |[0m   + 'Votre identifiant doit contenir entre 2 et 20 caractères'
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:29:42
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signup with username that already exists - returns a status 400
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:51
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    50:   test('returns an error', (t, res) => t.is(res.data.error, 'Cet identif…
+[33mtests_1  |[0m    51:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m    52:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Difference:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   - 200
+[33mtests_1  |[0m   + 400
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:51:46
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signup with username that already exists - returns no token
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:52
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    51:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m    52:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+[33mtests_1  |[0m    53: });                                                                      
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Difference:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   - 'string'
+[33mtests_1  |[0m   + 'undefined'
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:52:42
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin without password - returns an error
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:57
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    56:   setup((t) => axios.post(`${t.context.urlPrefix}/signin`));             
+[33mtests_1  |[0m    57:   test('returns an error', (t, res) => t.is(res.data.error, 'Le mot de p…
+[33mtests_1  |[0m    58:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'data\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:57:49
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin without password - returns a status 400
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:58
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    57:   test('returns an error', (t, res) => t.is(res.data.error, 'Le mot de p…
+[33mtests_1  |[0m    58:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m    59:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:58:53
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin without password - returns no token
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:59
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    58:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m    59:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+[33mtests_1  |[0m    60: });                                                                      
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'data\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:59:56
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin without username - returns an error
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:64
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    63:   setup((t) => axios.post(`${t.context.urlPrefix}/signin`, { password: '…
+[33mtests_1  |[0m    64:   test('returns an error', (t, res) => t.is(res.data.error, 'Votre ident…
+[33mtests_1  |[0m    65:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'data\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:64:49
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin without username - returns a status 400
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:65
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    64:   test('returns an error', (t, res) => t.is(res.data.error, 'Votre ident…
+[33mtests_1  |[0m    65:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m    66:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:65:53
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin without username - returns no token
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:66
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    65:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m    66:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+[33mtests_1  |[0m    67: });                                                                      
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'data\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:66:56
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin with invalid username - returns an error
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:74
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    73:   }));                                                                   
+[33mtests_1  |[0m    74:   test('returns an error', (t, res) => t.is(res.data.error, 'Votre ident…
+[33mtests_1  |[0m    75:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'data\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:74:49
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin with invalid username - returns a status 400
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:75
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    74:   test('returns an error', (t, res) => t.is(res.data.error, 'Votre ident…
+[33mtests_1  |[0m    75:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m    76:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:75:53
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin with invalid username - returns no token
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:76
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    75:   test('returns a status 400', (t, res) => t.is(res.status, 400));       
+[33mtests_1  |[0m    76:   test('returns no token', (t, res) => t.is(typeof res.data.token, 'unde…
+[33mtests_1  |[0m    77: });                                                                      
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'data\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:76:56
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin with wrong username - returns an error
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:82
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    81:     const initialRes = await axios.post(`${t.context.urlPrefix}/signup`,…
+[33mtests_1  |[0m    82:     t.is(initialRes.status, 200);                                        
+[33mtests_1  |[0m    83:     return axios.post(`${t.context.urlPrefix}/signin`, { ...VALID_USER, …
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › Object.fct (tests/2-failure-cases.test.js:82:21)
+[33mtests_1  |[0m   › tests/setup/common.js:39:18
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin with wrong username - returns a status 403
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:82
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    81:     const initialRes = await axios.post(`${t.context.urlPrefix}/signup`,…
+[33mtests_1  |[0m    82:     t.is(initialRes.status, 200);                                        
+[33mtests_1  |[0m    83:     return axios.post(`${t.context.urlPrefix}/signin`, { ...VALID_USER, …
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › Object.fct (tests/2-failure-cases.test.js:82:21)
+[33mtests_1  |[0m   › tests/setup/common.js:39:18
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin with wrong username - returns no token
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:82
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    81:     const initialRes = await axios.post(`${t.context.urlPrefix}/signup`,…
+[33mtests_1  |[0m    82:     t.is(initialRes.status, 200);                                        
+[33mtests_1  |[0m    83:     return axios.post(`${t.context.urlPrefix}/signin`, { ...VALID_USER, …
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › Object.fct (tests/2-failure-cases.test.js:82:21)
+[33mtests_1  |[0m   › tests/setup/common.js:39:18
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin with wrong password - returns an error
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:93
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    92:     const initialRes = await axios.post(`${t.context.urlPrefix}/signup`,…
+[33mtests_1  |[0m    93:     t.is(initialRes.status, 200);                                        
+[33mtests_1  |[0m    94:     return axios.post(`${t.context.urlPrefix}/signin`, { ...VALID_USER, …
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › Object.fct (tests/2-failure-cases.test.js:93:21)
+[33mtests_1  |[0m   › tests/setup/common.js:39:18
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin with wrong password - returns a status 403
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:93
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    92:     const initialRes = await axios.post(`${t.context.urlPrefix}/signup`,…
+[33mtests_1  |[0m    93:     t.is(initialRes.status, 200);                                        
+[33mtests_1  |[0m    94:     return axios.post(`${t.context.urlPrefix}/signin`, { ...VALID_USER, …
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › Object.fct (tests/2-failure-cases.test.js:93:21)
+[33mtests_1  |[0m   › tests/setup/common.js:39:18
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › POST /signin with wrong password - returns no token
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:93
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    92:     const initialRes = await axios.post(`${t.context.urlPrefix}/signup`,…
+[33mtests_1  |[0m    93:     t.is(initialRes.status, 200);                                        
+[33mtests_1  |[0m    94:     return axios.post(`${t.context.urlPrefix}/signin`, { ...VALID_USER, …
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › Object.fct (tests/2-failure-cases.test.js:93:21)
+[33mtests_1  |[0m   › tests/setup/common.js:39:18
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   2-failure-cases › GET /notes without token - returns a status 401
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   tests/2-failure-cases.test.js:104
+[33mtests_1  |[0m 
+[33mtests_1  |[0m    103:   // test('returns an error', (t, res) => t.is(res.data.error, 'missing…
+[33mtests_1  |[0m    104:   test('returns a status 401', (t, res) => t.is(res.status, 401));      
+[33mtests_1  |[0m    105: });                                                                     
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   Rejected promise returned by test. Reason:
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   TypeError {
+[33mtests_1  |[0m     message: 'Cannot read property \'status\' of undefined',
+[33mtests_1  |[0m   }
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   › tests/2-failure-cases.test.js:104:53
+[33mtests_1  |[0m   › tests/setup/common.js:41:12
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   ─
+[33mtests_1  |[0m 
+[33mtests_1  |[0m   24 tests failed
+[33mapi-note_tests_1 exited with code 1
+[0m
