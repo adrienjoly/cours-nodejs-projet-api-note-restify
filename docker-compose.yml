@@ -22,7 +22,7 @@ services:
       - ./:/home/node/app
     ports:
       - "3000:3000"
-    command: bash -c "echo 'npm install' && npm install && echo 'npm start' && npm start"
+    command: bash -c "echo 'npm install' && npm install && echo 'npm start' && npx pm2 start server.js --no-daemon"
     environment:
       JWT_KEY: "secret"
       PORT: 3000
